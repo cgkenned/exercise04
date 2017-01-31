@@ -8,10 +8,10 @@ new Vue({
     itemInputValue: '',
     cards: [
       {
-        item: 'finish homework',
+        item: '',
       },
       {
-        item: 'go on a run'
+        item: ''
       }
     ]
   },
@@ -24,6 +24,9 @@ new Vue({
     },
     removeCard (i) {
       console.log(i);
+      if (i > -1) {
+        array.splice(i, 1);
+      }
     }
   }
 });
